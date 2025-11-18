@@ -1,6 +1,6 @@
 # Beanie
 
-![beanie](imgur.com image)
+<img src="../media/Beanies.jpg" alt="Image of Microcontroller" height="200"/>
 
 *A small 10-key macropad ( 4x3 matrix ) with 0.96" OLED Display.*
 
@@ -65,3 +65,5 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 ## Useful Info
 
 Pins layout as in [Pro Micro Pinout](https://imgur.com/wMNx2u6)
+
+<img src="../media/pinout.png" alt="Image of Microcontroller" width="200"/>
