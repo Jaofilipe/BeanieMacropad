@@ -1,6 +1,8 @@
 # Beanie Macropad
 QMK-based Macropad project whith support for VIA & VIAL
 
+<img src="media/Beanies.jpg" alt="Image of Microcontroller" width="400"/>
+
 A small 10-key macropad (4x3 matrix) with a 0.96" SSD1306 I2C OLED.  
 This repository contains the hardware files and instructions to build, compile and flash the Beanie firmware using QMK.
 
@@ -24,15 +26,6 @@ This repository contains the hardware files and instructions to build, compile a
 <img src="media/micro.jpg" alt="Image of Microcontroller" height="200"/>
 <img src="media/oled.jpg" alt="Image of OLED" height="200"/>
 <img src="media/Assembled.jpg" alt="Image of assembled Macropad" height="200"/>
-</p>
-
-
----
-
-## Completed Macropads
-
-<p align="center">
-<img src="media/Beanies.jpg" alt="Image of assembled Macropad" width="400"/>
 </p>
 
 ---
