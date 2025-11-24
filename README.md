@@ -41,8 +41,8 @@ Brand new to QMK? Start with the [Complete Newbs Guide](https://docs.qmk.fm/#/ne
 ## The case
 Feel free to 3D design and assemble your own macropad case.   
 Several tools are available to help design a keypad:  
-  - To have some help designing your own keypad layout   
-  - To convert the keypad layout into a key matrix midplate for the switches  
+  - To have some help designing your own keypad layout: [`keyboard layout editor`](https://www.keyboard-layout-editor.com/)    
+  - To convert the keypad layout into a key matrix midplate drwaing for the switches: [`Keebio`](https://plate.keeb.io/)  
 After getting the midplate files, you can design the full case.   
 
 ## The circuit
@@ -52,7 +52,7 @@ Diodes user were 1N4148.
 Switches were Outemo Browns.  
 
 <p align="center">
-<img src="media/circuit.png" alt="Image of circuit" height="200"/>
+<img src="media/circuit.png" alt="Image of circuit" width="300"/>
 </p>
 
 The Oled Screen was connected to the VCC, GND, SDA and SCL lines of the Pro micro.  
