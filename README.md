@@ -31,10 +31,11 @@ This repository contains the hardware files and instructions to build, compile a
 ---
 
 # Quick start
-Familiarity with QMK is advised.
-Usage of QMK CLI tool is highly recommended for new users as it installs flashing tools for the Microcontrollers.<br>
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools)<br>
-And the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with the [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).<br>
+Familiarity with QMK is advised.  
+Usage of QMK CLI tool is highly recommended for new users as it installs flashing tools for the Microcontrollers.<br>  
+See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools)<br>  
+And the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.  
+Brand new to QMK? Start with the [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).<br>  
 
 ## Firstly: [QMK](https://qmk.fm/) & [VIA](https://www.caniusevia.com/)
 For simple [QMK](https://qmk.fm/) Macropad (where keycodes cannot be changed unless you change them in the code and flash a new firmware);  
