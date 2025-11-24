@@ -14,7 +14,7 @@
         "cols": ["F6", "F5", "F4"],
         "rows": ["B5", "B4", "E6", "D7"]
     },
-    "url": "https://tbd",
+    "url": "https://github.com/Jaofilipe/BeanieMacropad/tree/main/beanie",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x7331",
