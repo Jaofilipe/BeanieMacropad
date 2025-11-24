@@ -11,6 +11,12 @@
 * Hardware Availability: Online hobby/electronics websites, ebay, aliexpress, etc.
 * Repository path: keyboards/beanie
 
+Switch matrix layout:  
+
+<p align="center">
+<img src="media/circuit.png" alt="Image of circuit" height="200"/>
+</p>
+
 Make example for this keyboard (after setting up your build environment):
 
     make beanie:default
