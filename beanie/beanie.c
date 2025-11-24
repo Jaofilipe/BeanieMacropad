@@ -115,9 +115,28 @@ static const uint8_t digits[4][8] PROGMEM = {
 
 #define DIGIT_SIZE 8
 
-void render_big_digit(uint8_t n) {
-    if (n > 3) n = 0;
+void render_big_digit(layer_state_t state) {
+
+    uint8_t n = 0;
+
     oled_clear();
+
+    switch (state) {
+        case _ZERO:
+            n = 0;
+            break;
+        case _ONE:
+            n = 1;
+            break;
+        case _TWO:
+            n = 2;
+            break;
+        case _THREE:
+            n = 3;
+            break;
+        default:
+            n = 0;
+    }
 
     char buf[DIGIT_SIZE + 1];
     buf[DIGIT_SIZE] = '\0';
@@ -131,29 +150,33 @@ void render_big_digit(uint8_t n) {
             oled_write_ln(buf, false);
 
     }
+    oled_render_dirty(true);
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     // This runs every time the layer state changes
     // Example: light up an LED depending on layer
-    switch (get_highest_layer(state)) {
-        case _ZERO:
-            render_big_digit(0);
-            break;
-        case _ONE:
-            render_big_digit(1);
-            break;
-        case _TWO:
-            render_big_digit(2);
-            break;
-        case _THREE:
-            render_big_digit(3);
-            break;
-    }
-    oled_render_dirty(true);
+    render_big_digit(get_highest_layer(state));
     return state; // Always return the state
 }
 
+static void render_logo(void) {
+    static const char PROGMEM qmk_logo[] = {
+        0x80, 0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8A, 0x8B, 0x8C, 0x8D, 0x8E, 0x8F, 0x90, 0x91, 0x92, 0x93, 0x94,
+        0xA0, 0xA1, 0xA2, 0xA3, 0xA4, 0xA5, 0xA6, 0xA7, 0xA8, 0xA9, 0xAA, 0xAB, 0xAC, 0xAD, 0xAE, 0xAF, 0xB0, 0xB1, 0xB2, 0xB3, 0xB4,
+        0xC0, 0xC1, 0xC2, 0xC3, 0xC4, 0xC5, 0xC6, 0xC7, 0xC8, 0xC9, 0xCA, 0xCB, 0xCC, 0xCD, 0xCE, 0xCF, 0xD0, 0xD1, 0xD2, 0xD3, 0xD4, 0x00
+    };
+    oled_clear();
+    oled_write_P(qmk_logo, false);
+    oled_render_dirty(true);
+
+}
+
+void keyboard_post_init_user(void) {
+    render_logo();
+    wait_ms(1600);
+    render_big_digit(_ZERO); //layers always begin with zero
+}
 
 bool oled_task_user(void) {
     // Host Keyboard Layer Status
