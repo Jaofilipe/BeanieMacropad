@@ -32,10 +32,10 @@ This repository contains the hardware files and instructions to build, compile a
 
 # Quick start
 Familiarity with QMK is advised.<br>  
-Usage of QMK CLI tool is highly recommended for new users as it installs flashing tools for the Microcontrollers.<br>  
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools)<br>  
+Usage of QMK CLI tool is highly recommended for new users as it installs flashing tools for the Microcontrollers.<br>
+See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools)<br>
 And the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.<br>
-Brand new to QMK? Start with the [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).<br>  
+Brand new to QMK? Start with the [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).<br>
 
 ## Firstly: [QMK](https://qmk.fm/) & [VIA](https://www.caniusevia.com/)
 For simple [QMK](https://qmk.fm/) Macropad (where keycodes cannot be changed unless you change them in the code and flash a new firmware);  
@@ -50,6 +50,9 @@ Although it comes with the drawback of a higher memory footprint, I personally p
   - To be able to compile and flash VIAL you need first to [install qmk CLI](https://docs.qmk.fm/#/getting_started_build_tools).<br>
   - Then clone [vial-qmk repo](https://github.com/vial-kb/vial-qmk) and copy the [beanie folder](beanie) into the repo keyboards folder.<br>
   - Finally follow the build guidelines in [VIAL Webpage](https://get.vial.today/docs/porting-to-vial.html)<br>
+  -  `make beanie:vial` will compile the vial code  
+  -  `make beanie:vial:flash` will compile vial code and program the microcontroller  
+    
 The VIAL Macropad JSON file is provided in folder VIAL.<br>
 
  
